@@ -180,7 +180,7 @@ Destruction via `destroy()` follows these steps:
 4. Schedule setting destroyable such that `isDestroyed(destroyable)` returns `true`
 
 This algorithm results in the entire tree of destroyables being first marked as
-destroyed, then having all of their destructors called, and finally all being
+destroying, then having all of their destructors called, and finally all being
 marked as `isDestroyed`. There won't be any in between states where some items
 are marked as `isDestroying` while destroying, while others are not.
 
