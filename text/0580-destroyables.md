@@ -176,8 +176,8 @@ Destruction via `destroy()` follows these steps:
 
 1. Mark the destroyable such that `isDestroying(destroyable)` returns `true`
 2. Schedule calling the destroyable's destructors
-4. Call `destroy()` on each of the destroyable's associated children
-3. Schedule setting destroyable such that `isDestroyed(destroyable)` returns `true`
+3. Call `destroy()` on each of the destroyable's associated children
+4. Schedule setting destroyable such that `isDestroyed(destroyable)` returns `true`
 
 This algorithm results in the entire tree of destroyables being first marked as
 destroyed, then having all of their destructors called, and finally all being
